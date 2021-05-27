@@ -1,0 +1,17 @@
+_BASE_: "Base-Panoptic-FPN.yaml"
+MODEL:
+  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  MASK_ON: True
+  RESNETS:
+    DEPTH: 50
+    NORM: "GN"
+    STRIDE_IN_1X1: False
+  FPN:
+    NORM: "GN"
+    POST_NMS_TOPK_TRAIN: 2000
+  ROI_HEADS:
+    NAME: CascadeROIHeads
+  ROI_BOX_HEAD:
+    CLS_AGNOSTIC_BBOX_REG: True
+  ROI_MASK_HEAD:
+    NORM: "GN"
