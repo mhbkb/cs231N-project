@@ -8,7 +8,7 @@ from detectron2.engine import DefaultPredictor
 from detectron2.utils.visualizer import Visualizer
 from detectron2.data import MetadataCatalog, DatasetCatalog
 
-test_image = '/data/coco/val2017/000000405691.jpg'
+test_image = '/data/coco/val2017/000000411938.jpg'
 
 cfg = get_cfg()
 cfg.OUTPUT_DIR = "../output_cascade/"
